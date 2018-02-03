@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Test Project</title>
+    <title>Twbs-hgo</title>
     <style>
       body { padding-top: 70px; }
     </style>
@@ -36,22 +36,9 @@
             }
           }
         });
-        //,"bootstrap":"bootstrap/dist"
-        //,"bootstrap-datepicker":"bootstrap-datepicker/dist"
         require(["es6-shim","whatwg-fetch"],function(){
           require(["jquery"],function(_jq){
             $global.jQuery = $global.$ = _jq;
-            //$global.module = {};
-            /*
-            require(["highlightjs/highlight","dist/test/block-code/languages/pug","css!bootstrap/css/bootstrap.min.css","bootstrap/js/bootstrap.min","ferrugemjs/bootstrapper"],function(_hljs,_hljslangPUG){
-                //_hi.config
-                //console.log($global.module.exports);
-                //console.log(_hljslangXML);
-                //_hljs.registerLanguage('xml', $global.module.exports);
-                //_hljs.registerLanguage('pug', _hljslangPUG);
-                console.log(_hljs.listLanguages());
-            });
-            */
             require(["css!bootstrap/css/bootstrap.min.css","bootstrap/js/bootstrap.min","ferrugemjs/bootstrapper"],function(){
             });
           });
