@@ -1,0 +1,4 @@
+template
+	require(from="css!./loading-bar.css")
+	.ui-loading-bar
+		div(style="${'background-color:'+this.barColor}" class="${'ui-bar '+(this.isLoading ? 'is-loading' : '')}")

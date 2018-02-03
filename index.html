@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Test Project</title>
+    <style>
+      body { padding-top: 70px; }
+    </style>
+    <script src="node_modules/requirejs/require.js"></script>
+  </head>
+  <body>    
+    <div app="dist/test/init-app" template-extension=".pug"></div>
+    <script>
+      (function($global){
+        var npmPath = "node_modules";
+        requirejs.config({
+          baseUrl: '.',
+          paths: {
+            "jquery":npmPath+"/jquery/dist/jquery.min"
+            ,"bootstrap":npmPath+"/bootstrap/dist"
+            ,"event-emitter-lite":npmPath+"/event-emitter-lite/dist/amd/EventEmitter"
+            ,"incremental-dom":npmPath+"/incremental-dom/dist/incremental-dom-min"
+            ,"ferrugemjs":npmPath+"/ferrugemjs/dist/core"
+            ,"twbs-hgo":"dist/ui"
+            ,"tslib":npmPath+"/tslib/tslib"
+            ,"es6-shim":npmPath+"/es6-shim/es6-shim"
+            ,"whatwg-fetch":npmPath+"/whatwg-fetch/fetch"
+            ,"moment":npmPath+"/moment/moment"
+            ,"highlightjs":npmPath+"/highlight.js"
+          },
+          map: {
+            '*': {
+              'css': npmPath+'/require-css/css.min'
+            }
+          }
+        });
+        //,"bootstrap":"bootstrap/dist"
+        //,"bootstrap-datepicker":"bootstrap-datepicker/dist"
+        require(["es6-shim","whatwg-fetch"],function(){
+          require(["jquery"],function(_jq){
+            $global.jQuery = $global.$ = _jq;
+            //$global.module = {};
+            /*
+            require(["highlightjs/highlight","dist/test/block-code/languages/pug","css!bootstrap/css/bootstrap.min.css","bootstrap/js/bootstrap.min","ferrugemjs/bootstrapper"],function(_hljs,_hljslangPUG){
+                //_hi.config
+                //console.log($global.module.exports);
+                //console.log(_hljslangXML);
+                //_hljs.registerLanguage('xml', $global.module.exports);
+                //_hljs.registerLanguage('pug', _hljslangPUG);
+                console.log(_hljs.listLanguages());
+            });
+            */
+            require(["css!bootstrap/css/bootstrap.min.css","bootstrap/js/bootstrap.min","ferrugemjs/bootstrapper"],function(){
+            });
+          });
+        });
+      })(window);
+    </script>
+  </body>
+</html>

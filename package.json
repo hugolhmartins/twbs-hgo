@@ -1,0 +1,50 @@
+{
+  "name": "twbs-hgo",
+  "version": "0.0.1",
+  "description": "A basic router implementation with jspmPackage",
+  "main": false,
+  "files": [
+    "dist/ui/index.js"
+  ],
+  "scripts": {
+    "gulp": "./node_modules/.bin/gulp",
+    "watch": "gulp watch",
+    "compile": "gulp compile",
+    "convert": "gulp template",
+    "build": "gulp compile && gulp template && gulp sass"
+  },
+  "author": "ferrugemjs",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ferrugemjs/router"
+  },
+  "devDependencies": {
+    "bootstrap": "3.3.7",
+    "bootstrap-datepicker": "1.6.4",
+    "es6-shim": "0.35.3",
+    "event-emitter-lite": "1.6.0",
+    "ferrugemjs": "0.24.0",
+    "ferrugemjs-node": "0.24.0",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^2.3.1",
+    "gulp-ferrugemjs": "0.18.0",
+    "gulp-jsbeautify": "^0.1.1",
+    "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-typescript": "3.2.4",
+    "highlight.js": "^9.12.0",
+    "jquery": "3.3.1",
+    "moment": "^2.18.1",
+    "require-css": "^0.1.10",
+    "require-dir": "^0.3.0",
+    "requirejs": "2.3.3",
+    "tslib": "1.9.0",
+    "typescript": "2.6.2",
+    "whatwg-fetch": "2.0.3"
+  },
+  "dependencies": {
+    "jade-highlight": "0.0.1"
+  }
+}

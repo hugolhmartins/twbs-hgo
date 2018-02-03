@@ -1,0 +1,9 @@
+template(no-model)
+	require(from="twbs-hgo/index as twbs" type="namespace")
+	.test-loading-bar
+		twbs:loading-bar(show="${true}")
+		br
+		twbs:loading-bar(show="${true}" bar-color="red")
+		br
+		twbs:loading-bar(show="${true}" bar-color="black")
+		alias

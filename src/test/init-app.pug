@@ -1,0 +1,32 @@
+template(no-model)
+	require(from="css!./init-app.css")
+	require(from="dist/ui/block-code/block-code")
+	require(from="./apps/test-loading-bar")
+	require(from="./apps/test-confirm-dialog")
+	require(from="./struture/nav-bar as top-nav-bar")
+	.container.init-app
+		top-nav-bar
+		.col-xs-12.no-padding-horizontal
+			h2 Instalation
+			.bs-example
+				h4 npm
+				pre
+					code
+						| npm install twbs-hgo --save
+				h4 template pug		
+				block-code(src="src/test/apps/install-pug.pug" language="pug")
+				h4 template html
+				block-code(src="src/test/apps/install-html.html" language="xml")
+			h2 Components
+			h3 Loading Bar
+				h4 A loading bar
+			.bs-example
+				h4 Example
+				test-loading-bar
+				block-code(src="src/test/apps/test-loading-bar.pug" language="pug")
+			h3 Confirm Dialog
+				h4 A wrapper to comfirm dialog	
+			.bs-example
+				h4 Example
+				test-confirm-dialog
+				block-code(src="src/test/apps/test-confirm-dialog.pug" language="pug")

@@ -1,0 +1,29 @@
+template(no-model)
+	require(from="css!highlightjs/styles/docco.css")
+	require(from="highlightjs/lib/highlight as _hljs" type="script")
+	require(from="dist/ui/block-code/languages/lang-pug as _lang_pug" type="script")
+	require(from="dist/ui/block-code/languages/lang-xml as _lang_xml" type="script")
+	.block-code
+		script.
+			this._temp_uid = Math.ceil(Math.random()*1000,4);
+
+		pre
+			code.block-content.hljs(id="${this._temp_uid}")
+		script.
+			_hljs.configure({
+				tabReplace: '  '
+			});
+			_hljs.registerLanguage("pug", _lang_pug);
+			_hljs.registerLanguage("xml", _lang_xml);
+			let block = document.getElementById(this._temp_uid);
+			fetch(this.src)
+				.then(res => res.text())
+				.then(res_str => {	
+					block.className += this.language;				
+					block.textContent = res_str;
+					setTimeout(() => {
+						console.log(this.language);
+						_hljs.highlightBlock(block,this.language);
+					},400);
+				});
+

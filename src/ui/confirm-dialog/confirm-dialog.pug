@@ -1,0 +1,44 @@
+template
+  require(from='jquery as _jq' type='script')
+  require(from="css!./confirm-dialog.css")
+  div
+    script(type='text/javascript').
+      this.typeIcon = 'warning sign';
+      this.type = this.type||'warning';
+      this.colorType = "warning";
+      if(this.type === 'info'){
+      	this.typeIcon = 'info circle';
+        this.colorType = "primary";
+      }else if(this.type === 'error'){
+      	this.typeIcon = 'bug';
+        this.colorType = "danger";
+      }else if(this.type === 'confirm'){
+      	this.typeIcon = 'Help Circle';
+        this.colorType = "success";
+      }
+    .modal.fade.confirm-dialog(tabindex='-1' role='dialog')
+      .modal-dialog(style='vertical-align: middle;' role='document')
+        .modal-content
+          div(class="${'modal-header bg-'+this.colorType}")
+            button.close(type='button' data-dismiss='modal' aria-label='Close')
+              span(aria-hidden='true') &times;
+            h4.modal-title ${(this.title ? this.title : ' ')}
+          .modal-body
+            p
+              content
+          .modal-footer
+            button.btn.btn-default.btn-sm(if="['warning','confirm'].indexOf(this.type) > -1" type='button' data-dismiss='modal') Cancelar
+            #{"if"}(condition='this.onConfirm.hasSubscribers()')
+              button.btn.btn-warning.btn-sm(click.trigger='this.confirm' data-dismiss='modal' aria-label='Close')
+                | Sim 
+                i.glyphicon.glyphicon-ok
+              #{"elseif"}(condition='this.processUrl')
+                a.btn.btn-warning.btn-sm(href='${this.processUrl}')
+                  | Sim 
+                  i.glyphicon.glyphicon-ok
+              #{"else"}
+                button.btn.btn-warning.btn-sm(data-dismiss='modal' aria-label='Close')
+                  | Sim 
+                  i.glyphicon.glyphicon-ok
+    script(type='text/javascript').
+      _jq('.confirm-dialog:first').modal({show:true,backdrop:true});
