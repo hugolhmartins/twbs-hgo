@@ -38,6 +38,11 @@ jspm_packages
 
 #dist dir
 dist/test
+src/
+tasks/
+Gulpfile.js
+index.html
+tsconfig.json
 
 #.npmrc
 .npmrc

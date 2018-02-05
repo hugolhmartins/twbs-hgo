@@ -1,11 +1,8 @@
 {
   "name": "twbs-hgo",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "A basic router implementation with jspmPackage",
-  "main": false,
-  "files": [
-    "dist/ui/index.js"
-  ],
+  "main": "dist/ui/index.js",
   "scripts": {
     "gulp": "./node_modules/.bin/gulp",
     "watch": "gulp watch",

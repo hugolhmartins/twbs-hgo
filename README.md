@@ -9,7 +9,6 @@
 ```
 npm install twbs-hgo --save
 ```
-in config.js.
 
 #### Usage
 
