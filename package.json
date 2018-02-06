@@ -8,9 +8,10 @@
     "watch": "gulp watch",
     "compile": "gulp compile",
     "convert": "gulp template",
-    "build": "gulp compile && gulp template && gulp sass"
+    "build": "gulp compile && gulp template && gulp sass",
+    "prepublish":"npm run build && gulp css:loader-replace"
   },
-  "author": "ferrugemjs",
+  "author": "hugolhmartins",
   "license": "ISC",
   "repository": {
     "type": "git",
@@ -18,7 +19,6 @@
   },
   "devDependencies": {
     "bootstrap": "3.3.7",
-    "bootstrap-datepicker": "1.6.4",
     "es6-shim": "0.35.3",
     "event-emitter-lite": "1.6.0",
     "ferrugemjs": "0.24.0",
@@ -30,6 +30,7 @@
     "gulp-pug": "^3.3.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
+    "gulp-string-replace": "^1.0.0",
     "gulp-typescript": "3.2.4",
     "highlight.js": "^9.12.0",
     "jquery": "3.3.1",
@@ -42,7 +43,7 @@
     "whatwg-fetch": "2.0.3"
   },
   "dependencies": {
-    "bootstrap-datepicker": "^1.6.4",
-    "twbs-pagination": "^1.4.1"
+    "bootstrap-datepicker": "1.6.4",
+    "twbs-pagination": "1.4.1"
   }
 }

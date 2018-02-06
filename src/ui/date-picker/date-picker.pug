@@ -1,7 +1,8 @@
 template
   require(from="jquery as jq" type="script")
   require(from="moment as moment" type="script")
-  require(from="bootstrap-datepicker as _date_picker_hgo" type="script")
+  require(from="css-loader!bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css")
+  require(from="bootstrap-datepicker/dist/js/bootstrap-datepicker.min as _twbs_date_picker" type="script")
   .input-group.date.date-picker.col-xs-24
     input.form-control(id="${this._uid}" type="text" placeholder="${this.placeholder}" change.trigger="this.changeDate" value="${this.value?moment(this.value).format(this.format.toUpperCase()):''}")
     span.input-group-addon
