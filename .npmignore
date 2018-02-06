@@ -43,6 +43,7 @@ tasks/
 Gulpfile.js
 index.html
 tsconfig.json
+public/
 
 #.npmrc
 .npmrc

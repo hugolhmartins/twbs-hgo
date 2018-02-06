@@ -39,6 +39,7 @@ jspm_packages
 
 #dist dir
 dist
+public
 
 #.npmrc
 .npmrc

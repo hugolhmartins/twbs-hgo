@@ -9,7 +9,8 @@
     "compile": "gulp compile",
     "convert": "gulp template",
     "build": "gulp compile && gulp template && gulp sass",
-    "prepublish":"npm run build && gulp css:loader-replace"
+    "prepublish":"npm run build && gulp css:loader-replace",
+    "build:public":"npm run build && gulp build:public"
   },
   "author": "hugolhmartins",
   "license": "ISC",

@@ -14,38 +14,29 @@
     <div app="dist/test/init-app" template-extension=".pug"></div>
     <script>
       (function($global){
-        var npmPath = "node_modules";
         requirejs.config({
           baseUrl: '.',
-          paths: {
-            "jquery":npmPath+"/jquery/dist/jquery.min"
-            ,"bootstrap":npmPath+"/bootstrap/dist"
-            ,"event-emitter-lite":npmPath+"/event-emitter-lite/dist/amd/EventEmitter"
-            ,"incremental-dom":npmPath+"/incremental-dom/dist/incremental-dom-min"
-            ,"ferrugemjs":npmPath+"/ferrugemjs/dist/core"
-            ,"twbs-hgo":"dist/ui"
-            ,"tslib":npmPath+"/tslib/tslib"
-            ,"es6-shim":npmPath+"/es6-shim/es6-shim"
-            ,"whatwg-fetch":npmPath+"/whatwg-fetch/fetch"
-            ,"moment":npmPath+"/moment/moment"
-            ,"highlightjs":npmPath+"/highlight.js"
-            ,"twbs-pagination":npmPath+"/twbs-pagination/jquery.twbsPagination.min"
-            ,"bootstrap-datepicker":npmPath+"/bootstrap-datepicker"
-          },
           map: {
             '*': {
-              'css-loader': npmPath+'/require-css/css.min'
+              'css-loader': "node_modules/require-css/css.min"
             }
           }
         });
-        require(["es6-shim","whatwg-fetch"],function(){
-          require(["jquery"],function(_jq){
-            $global.jQuery = $global.$ = _jq;
-            require(["css-loader!bootstrap/css/bootstrap.min.css","bootstrap/js/bootstrap.min","ferrugemjs/bootstrapper"],function(){
-            });
-          });
+        require(["node_modules/es6-shim/es6-shim","node_modules/whatwg-fetch/fetch"],function(){
+          fetch('require-config.json')
+            .then(function(res){
+              return res.json();
+            })
+            .then(function(config){
+              requirejs.config({paths:config.paths});
+                require(["jquery"],function(_jq){
+                  $global.jQuery = $global.$ = _jq;
+                  require(["css-loader!bootstrap/css/bootstrap.min.css","bootstrap/js/bootstrap.min","ferrugemjs/bootstrapper"],function(){
+                  });
+                });
+            })
         });
-      })(window);
+      })(window);      
     </script>
   </body>
 </html>
