@@ -29,17 +29,19 @@
             ,"whatwg-fetch":npmPath+"/whatwg-fetch/fetch"
             ,"moment":npmPath+"/moment/moment"
             ,"highlightjs":npmPath+"/highlight.js"
+            ,"twbs-pagination":npmPath+"/twbs-pagination/jquery.twbsPagination.min"
+            ,"bootstrap-datepicker":npmPath+"/bootstrap-datepicker/dist/js/bootstrap-datepicker.min"
           },
           map: {
             '*': {
-              'css': npmPath+'/require-css/css.min'
+              'css-loader': npmPath+'/require-css/css.min'
             }
           }
         });
         require(["es6-shim","whatwg-fetch"],function(){
           require(["jquery"],function(_jq){
             $global.jQuery = $global.$ = _jq;
-            require(["css!bootstrap/css/bootstrap.min.css","bootstrap/js/bootstrap.min","ferrugemjs/bootstrapper"],function(){
+            require(["css-loader!bootstrap/css/bootstrap.min.css","bootstrap/js/bootstrap.min","ferrugemjs/bootstrapper"],function(){
             });
           });
         });

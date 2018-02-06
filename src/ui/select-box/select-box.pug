@@ -1,0 +1,16 @@
+template
+  require(from="jquery as jq" type="script")
+  require(from="css-loader!./select-box.css")
+  .input-group.col-xs-24.select-box.not-transformed
+    input.form-control(type="text" placeholder="${this.placeholder}" keyup.trigger="this.setDescFilter" focus.trigger="this.refresh({isVisibleList:true})" blur.trigger="this.refresh({isVisibleList:false})" value="${this.getSelectedDesc()}" index="-1")
+    span.input-group-addon(click.trigger="this.refresh({isVisibleList:!this.isVisibleList})" style="border-left:0px")
+      i(class="${'glyphicon glyphicon-menu-'+(this.isVisibleList?'up':'down')}")
+    ul.dropdown-list-select-box(if="this.isVisibleList" mousedown.trigger="this.clickListHandler")
+      li(each="opt,$indx in this.data" data-indx="${$indx}" class="${$indx == this.arrowIndex?'is-selected-index':''}")
+        span(data-indx="${$indx}") ${opt[this.descField]}
+    script(if="!this.loaded").
+      this.loaded = true;
+      window.setTimeout(function(){
+      this.setIndexFromValue();
+      this.refresh();
+      }.bind(this),100);

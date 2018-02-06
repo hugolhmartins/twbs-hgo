@@ -1,8 +1,11 @@
 template(no-model)
-	require(from="css!./init-app.css")
+	require(from="css-loader!./init-app.css")
 	require(from="dist/ui/block-code/block-code")
 	require(from="./apps/test-loading-bar")
 	require(from="./apps/test-confirm-dialog")
+	require(from="./apps/test-pagination-box")
+	require(from="./apps/test-date-picker")
+	require(from="./apps/test-select-box")
 	require(from="./struture/nav-bar as top-nav-bar")
 	.container.init-app
 		top-nav-bar
@@ -30,3 +33,22 @@ template(no-model)
 				h4 Example
 				test-confirm-dialog
 				block-code(src="src/test/apps/test-confirm-dialog.pug" language="pug")
+			h3 Pagination Box
+				h4 A pagination	
+			.bs-example
+				h4 Example
+				test-pagination-box
+				block-code(src="src/test/apps/test-pagination-box.pug" language="pug")
+			h3 Date Picker
+				h4 A Date calendar
+			.bs-example
+				h4 Example
+				test-date-picker
+				block-code(src="src/test/apps/test-date-picker.pug" language="pug")
+			h3 Select Box
+				h4 A Select Box
+			.bs-example
+				h4 Example
+				test-select-box
+				block-code(src="src/test/apps/test-select-box.pug" language="pug")
+				block-code(src="src/test/apps/test-select-box.ts" language="typescript")

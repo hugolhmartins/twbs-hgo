@@ -1,8 +1,9 @@
 template(no-model)
-	require(from="highlightjs/styles/docco.css")
+	require(from="css-loader!highlightjs/styles/docco.css")
 	require(from="highlightjs/lib/highlight as _hljs" type="script")
 	require(from="dist/ui/block-code/languages/lang-pug as _lang_pug" type="script")
 	require(from="dist/ui/block-code/languages/lang-xml as _lang_xml" type="script")
+	require(from="dist/ui/block-code/languages/lang-typescript as _lang_typescript" type="script")
 	.block-code
 		script.
 			this._temp_uid = Math.ceil(Math.random()*1000,4);
@@ -15,6 +16,7 @@ template(no-model)
 			});
 			_hljs.registerLanguage("pug", _lang_pug);
 			_hljs.registerLanguage("xml", _lang_xml);
+			_hljs.registerLanguage("typescript", _lang_typescript);
 			let block = document.getElementById(this._temp_uid);
 			fetch(this.src)
 				.then(res => res.text())
@@ -22,7 +24,6 @@ template(no-model)
 					block.className += this.language;				
 					block.textContent = res_str;
 					setTimeout(() => {
-						console.log(this.language);
 						_hljs.highlightBlock(block,this.language);
 					},400);
 				});

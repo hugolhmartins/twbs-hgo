@@ -1,0 +1,23 @@
+.dropdown-list-select-box{
+    position:absolute;
+    top:31px;
+    left:0px;
+    border:1px solid #ccc;
+    width:100%;
+    z-index:50;
+    background-color:#fff;
+    padding:5px;
+    border-radius:2px;
+    list-style:none;
+    cursor: pointer;
+    max-height: 160px;
+    overflow: auto;
+    > li{
+        min-height:25px;
+        margin-bottom:1px;
+        padding:5px;
+        &:hover,&.is-selected-index{
+            background-color:#f1f1f1;
+        }
+    }
+}

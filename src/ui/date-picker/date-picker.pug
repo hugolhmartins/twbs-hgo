@@ -1,0 +1,18 @@
+template
+  require(from="jquery as jq" type="script")
+  require(from="moment as moment" type="script")
+  require(from="bootstrap-datepicker as _date_picker_hgo" type="script")
+  .input-group.date.date-picker.col-xs-24
+    input.form-control(id="${this._uid}" type="text" placeholder="${this.placeholder}" change.trigger="this.changeDate" value="${this.value?moment(this.value).format(this.format.toUpperCase()):''}")
+    span.input-group-addon
+      i.glyphicon.glyphicon-calendar
+    script(type="text/javascript").
+      this.loaded = true;
+      window.setTimeout(function(){
+      jq('#'+this._uid)
+      .parent(".input-group.date")
+      .datepicker({
+      autoclose: true
+      ,format:this.format
+      });
+      }.bind(this),200)
