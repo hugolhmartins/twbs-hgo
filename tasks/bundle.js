@@ -1,11 +1,18 @@
 var gulp = require('gulp');
 var reqConfig = require("../require-config.json");
 
+var permitedFormats = "js|css|woff|woff2|ttf|svg";
+
 var pathsJoin = [];
-pathsJoin.push("node_modules/requirejs/**/*");
-pathsJoin.push("node_modules/require-css/**/*");
+pathsJoin.push(`node_modules/requirejs/**/*.+(${permitedFormats})`);
+pathsJoin.push(`node_modules/require-css/**/*.+(${permitedFormats})`);
 Object.keys(reqConfig.paths).forEach(path => {
-	pathsJoin.push("node_modules/"+path+"/**/*");
+	pathsJoin.push(`node_modules/${path}/**/*.+(${permitedFormats})`);
+});
+
+gulp.task("build:public",["copy:index","copy:dist","copy:test","copy:src"],function(){
+    return gulp.src(pathsJoin, { "base" : "./node_modules" })
+        .pipe(gulp.dest("public/vendors"));
 });
 
 gulp.task("copy:index",function(){
@@ -15,7 +22,7 @@ gulp.task("copy:index",function(){
 
 gulp.task("copy:dist",function(){
     return gulp.src(["dist/ui/**/*"], { "base" : "./dist" })
-        .pipe(gulp.dest("public/node_modules/twbs-hgo/dist"));
+        .pipe(gulp.dest("public/vendors/twbs-hgo/dist"));
 });
 
 gulp.task("copy:test",function(){
@@ -27,9 +34,3 @@ gulp.task("copy:src",function(){
     return gulp.src(["src/test/apps/**/*"], { "base" : "." })
         .pipe(gulp.dest("public"));
 });
-
-gulp.task("build:public",["copy:index","copy:dist","copy:test","copy:src"],function(){
-    return gulp.src(pathsJoin, { "base" : "." })
-        .pipe(gulp.dest("public"));
-});
-
