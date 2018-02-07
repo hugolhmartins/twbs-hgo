@@ -1,17 +1,17 @@
 define(["exports", "incremental-dom", "ferrugemjs/component-factory", "twbs-hgo/index"], function(exports, _idom, _libfjs_mod_, _twbs) {
-    var __mod__whbhAsa2gGEKOFpXhp117i_tmp = "_tmp_constructor_no_view__mod__whbhAsa2gGEKOFpXhp117i";
+    var __mod__uhNt7jFenhZr1KwWNoDbjV_tmp = "_tmp_constructor_no_view__mod__uhNt7jFenhZr1KwWNoDbjV";
     exports.default = (function(super_clazz) {
-        function _clazz_sub_MVMHDNJm_zUAu9GdjCkDXe_tmp() {
+        function _clazz_sub_iXFDonf2BT6WCCzSsh7nOk_tmp() {
             super_clazz.call(this);
         };
-        _clazz_sub_MVMHDNJm_zUAu9GdjCkDXe_tmp.prototype = Object.create(super_clazz.prototype);
-        _clazz_sub_MVMHDNJm_zUAu9GdjCkDXe_tmp.prototype.constructor = _clazz_sub_MVMHDNJm_zUAu9GdjCkDXe_tmp;
-        _clazz_sub_MVMHDNJm_zUAu9GdjCkDXe_tmp.prototype._$attrs$_ = {
+        _clazz_sub_iXFDonf2BT6WCCzSsh7nOk_tmp.prototype = Object.create(super_clazz.prototype);
+        _clazz_sub_iXFDonf2BT6WCCzSsh7nOk_tmp.prototype.constructor = _clazz_sub_iXFDonf2BT6WCCzSsh7nOk_tmp;
+        _clazz_sub_iXFDonf2BT6WCCzSsh7nOk_tmp.prototype._$attrs$_ = {
             "name": "div",
             "static": [],
             "dinamic": "\"\""
         };
-        _clazz_sub_MVMHDNJm_zUAu9GdjCkDXe_tmp.prototype.render = function($_this_$) {
+        _clazz_sub_iXFDonf2BT6WCCzSsh7nOk_tmp.prototype.render = function($_this_$) {
             (function() {
                 var _$_inst_$_ = _libfjs_mod_.default.build({
                     "classFactory": _twbs.loading_bar,
@@ -21,7 +21,7 @@ define(["exports", "incremental-dom", "ferrugemjs/component-factory", "twbs-hgo/
                     "hostVars": {},
                     "staticVars": {
                         "show": "true",
-                        "key:id": "tmp_key_inst_custom_comphBX2ORaAuCtxdsVkzOsOrC",
+                        "key:id": "tmp_key_inst_custom_compMekXh_4DGHFk7MejC4vd06",
                         "is": "twbs:loading-bar"
                     }
                 });
@@ -30,6 +30,6 @@ define(["exports", "incremental-dom", "ferrugemjs/component-factory", "twbs-hgo/
 
             })();
         };
-        return _clazz_sub_MVMHDNJm_zUAu9GdjCkDXe_tmp;
+        return _clazz_sub_iXFDonf2BT6WCCzSsh7nOk_tmp;
     })(function() {})
 });

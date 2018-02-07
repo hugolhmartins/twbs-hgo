@@ -1,17 +1,17 @@
 define(["exports", "incremental-dom", "ferrugemjs/component-factory"], function(exports, _idom, _libfjs_mod_) {
-    var __mod__fwvcJ84jX5nFHsoCRG7iif_tmp = "_tmp_constructor_no_view__mod__fwvcJ84jX5nFHsoCRG7iif";
+    var __mod__WGGmjk73L2g5_3vw5hLKdS_tmp = "_tmp_constructor_no_view__mod__WGGmjk73L2g5_3vw5hLKdS";
     exports.default = (function(super_clazz) {
-        function _clazz_sub_zcvd2SbNKMAC485sMO2z09_tmp() {
+        function _clazz_sub_JXDS7RLJU2a_xe8MV3Z96b_tmp() {
             super_clazz.call(this);
         };
-        _clazz_sub_zcvd2SbNKMAC485sMO2z09_tmp.prototype = Object.create(super_clazz.prototype);
-        _clazz_sub_zcvd2SbNKMAC485sMO2z09_tmp.prototype.constructor = _clazz_sub_zcvd2SbNKMAC485sMO2z09_tmp;
-        _clazz_sub_zcvd2SbNKMAC485sMO2z09_tmp.prototype._$attrs$_ = {
+        _clazz_sub_JXDS7RLJU2a_xe8MV3Z96b_tmp.prototype = Object.create(super_clazz.prototype);
+        _clazz_sub_JXDS7RLJU2a_xe8MV3Z96b_tmp.prototype.constructor = _clazz_sub_JXDS7RLJU2a_xe8MV3Z96b_tmp;
+        _clazz_sub_JXDS7RLJU2a_xe8MV3Z96b_tmp.prototype._$attrs$_ = {
             "name": "nav",
             "static": ["class", "navbar navbar-inverse navbar-fixed-top", "style", "background-color: #6f5499;border-bottom:0px;"],
             "dinamic": "\"\""
         };
-        _clazz_sub_zcvd2SbNKMAC485sMO2z09_tmp.prototype.render = function($_this_$) {
+        _clazz_sub_JXDS7RLJU2a_xe8MV3Z96b_tmp.prototype.render = function($_this_$) {
             _idom.elementOpen("div", null, ["class", "container-fluid"], "");
 
             _idom.elementOpen("div", null, ["class", "navbar-header"], "");
@@ -44,6 +44,6 @@ define(["exports", "incremental-dom", "ferrugemjs/component-factory"], function(
 
             _idom.elementClose("div");
         };
-        return _clazz_sub_zcvd2SbNKMAC485sMO2z09_tmp;
+        return _clazz_sub_JXDS7RLJU2a_xe8MV3Z96b_tmp;
     })(function() {})
 });

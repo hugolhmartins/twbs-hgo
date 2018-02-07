@@ -1,17 +1,17 @@
 define(["exports", "incremental-dom", "ferrugemjs/component-factory", "twbs-hgo/block-code/block-code.pug", "./apps/test-loading-bar.pug", "./apps/test-confirm-dialog.pug", "./apps/test-pagination-box.pug", "./apps/test-date-picker.pug", "./apps/test-select-box.pug", "./struture/nav-bar.pug", "css-loader!./init-app.css"], function(exports, _idom, _libfjs_mod_, _block_code, _test_loading_bar, _test_confirm_dialog, _test_pagination_box, _test_date_picker, _test_select_box, _top_nav_bar) {
-    var __mod__ZvwL9_xjlDibr00dS_M_Vp_tmp = "_tmp_constructor_no_view__mod__ZvwL9_xjlDibr00dS_M_Vp";
+    var __mod__geG4SpRujkp5VXaAAEKZZn_tmp = "_tmp_constructor_no_view__mod__geG4SpRujkp5VXaAAEKZZn";
     exports.default = (function(super_clazz) {
-        function _clazz_sub_HtR0v_btS0NKl7ArDhCPUi_tmp() {
+        function _clazz_sub_GEL8JLJvpbmvlAtMKBRLbs_tmp() {
             super_clazz.call(this);
         };
-        _clazz_sub_HtR0v_btS0NKl7ArDhCPUi_tmp.prototype = Object.create(super_clazz.prototype);
-        _clazz_sub_HtR0v_btS0NKl7ArDhCPUi_tmp.prototype.constructor = _clazz_sub_HtR0v_btS0NKl7ArDhCPUi_tmp;
-        _clazz_sub_HtR0v_btS0NKl7ArDhCPUi_tmp.prototype._$attrs$_ = {
+        _clazz_sub_GEL8JLJvpbmvlAtMKBRLbs_tmp.prototype = Object.create(super_clazz.prototype);
+        _clazz_sub_GEL8JLJvpbmvlAtMKBRLbs_tmp.prototype.constructor = _clazz_sub_GEL8JLJvpbmvlAtMKBRLbs_tmp;
+        _clazz_sub_GEL8JLJvpbmvlAtMKBRLbs_tmp.prototype._$attrs$_ = {
             "name": "div",
             "static": ["class", "container init-app"],
             "dinamic": "\"\""
         };
-        _clazz_sub_HtR0v_btS0NKl7ArDhCPUi_tmp.prototype.render = function($_this_$) {
+        _clazz_sub_GEL8JLJvpbmvlAtMKBRLbs_tmp.prototype.render = function($_this_$) {
             (function() {
                 var _$_inst_$_ = _libfjs_mod_.default.build({
                     "classFactory": _top_nav_bar.default,
@@ -20,7 +20,7 @@ define(["exports", "incremental-dom", "ferrugemjs/component-factory", "twbs-hgo/
                     "target": "",
                     "hostVars": {},
                     "staticVars": {
-                        "key:id": "tmp_key_inst_custom_compMCvk5BRzZ_LHeM7urhVM15",
+                        "key:id": "tmp_key_inst_custom_compKVFZRSt6kkp3x_dJAhKK91",
                         "is": "top-nav-bar"
                     }
                 });
@@ -71,7 +71,7 @@ define(["exports", "incremental-dom", "ferrugemjs/component-factory", "twbs-hgo/
                     "staticVars": {
                         "src": "src/test/apps/install-pug.pug",
                         "language": "pug",
-                        "key:id": "tmp_key_inst_custom_compPTi0Nx2GpfHk2HcEu9KmJn",
+                        "key:id": "tmp_key_inst_custom_compkRkF9CdGsJ90DTKEM93Wg5",
                         "is": "block-code"
                     }
                 });
@@ -96,7 +96,7 @@ define(["exports", "incremental-dom", "ferrugemjs/component-factory", "twbs-hgo/
                     "staticVars": {
                         "src": "src/test/apps/install-html.html",
                         "language": "xml",
-                        "key:id": "tmp_key_inst_custom_compvAitapVTSc92h6sXt3JiOz",
+                        "key:id": "tmp_key_inst_custom_compssFge9OLoIXlovxDcIitlB",
                         "is": "block-code"
                     }
                 });
@@ -141,7 +141,7 @@ define(["exports", "incremental-dom", "ferrugemjs/component-factory", "twbs-hgo/
                     "target": "",
                     "hostVars": {},
                     "staticVars": {
-                        "key:id": "tmp_key_inst_custom_compgdOnV1LMuHo1IeAe3fKacL",
+                        "key:id": "tmp_key_inst_custom_compiRNTWscvEbXkWJafP0NIpW",
                         "is": "test-loading-bar"
                     }
                 });
@@ -160,7 +160,7 @@ define(["exports", "incremental-dom", "ferrugemjs/component-factory", "twbs-hgo/
                     "staticVars": {
                         "src": "src/test/apps/test-loading-bar.pug",
                         "language": "pug",
-                        "key:id": "tmp_key_inst_custom_compPKotWkpwhfvoM1hCNtcd7N",
+                        "key:id": "tmp_key_inst_custom_compUMMK3kpi2Xuiw2oKDttxsK",
                         "is": "block-code"
                     }
                 });
@@ -199,7 +199,7 @@ define(["exports", "incremental-dom", "ferrugemjs/component-factory", "twbs-hgo/
                     "target": "",
                     "hostVars": {},
                     "staticVars": {
-                        "key:id": "tmp_key_inst_custom_compBUKPihW0XNrVR9rbAiHdG_",
+                        "key:id": "tmp_key_inst_custom_compFewdsonGU8hWIkkMDlNUSt",
                         "is": "test-confirm-dialog"
                     }
                 });
@@ -218,7 +218,7 @@ define(["exports", "incremental-dom", "ferrugemjs/component-factory", "twbs-hgo/
                     "staticVars": {
                         "src": "src/test/apps/test-confirm-dialog.pug",
                         "language": "pug",
-                        "key:id": "tmp_key_inst_custom_compWwUVOXzHzb3TtG1K66SBXV",
+                        "key:id": "tmp_key_inst_custom_compRCRvhITExnEao3SRhA8kj0",
                         "is": "block-code"
                     }
                 });
@@ -257,7 +257,7 @@ define(["exports", "incremental-dom", "ferrugemjs/component-factory", "twbs-hgo/
                     "target": "",
                     "hostVars": {},
                     "staticVars": {
-                        "key:id": "tmp_key_inst_custom_compnLKGifxS3FLSVpvAkJLGlA",
+                        "key:id": "tmp_key_inst_custom_comptJO7VOnSX_SsTBuckUm618",
                         "is": "test-pagination-box"
                     }
                 });
@@ -276,7 +276,7 @@ define(["exports", "incremental-dom", "ferrugemjs/component-factory", "twbs-hgo/
                     "staticVars": {
                         "src": "src/test/apps/test-pagination-box.pug",
                         "language": "pug",
-                        "key:id": "tmp_key_inst_custom_compxeJL692ZenK_ix1RmT2zIV",
+                        "key:id": "tmp_key_inst_custom_compMiX5UfHna5TKbdgAzkccsX",
                         "is": "block-code"
                     }
                 });
@@ -315,7 +315,7 @@ define(["exports", "incremental-dom", "ferrugemjs/component-factory", "twbs-hgo/
                     "target": "",
                     "hostVars": {},
                     "staticVars": {
-                        "key:id": "tmp_key_inst_custom_comphfN27TG_ilNlFFTtpPkBlV",
+                        "key:id": "tmp_key_inst_custom_compSOioeEDpAPNUZW7FN9TPFf",
                         "is": "test-date-picker"
                     }
                 });
@@ -334,7 +334,7 @@ define(["exports", "incremental-dom", "ferrugemjs/component-factory", "twbs-hgo/
                     "staticVars": {
                         "src": "src/test/apps/test-date-picker.pug",
                         "language": "pug",
-                        "key:id": "tmp_key_inst_custom_compOrxJLct4kkppinwNHnWlvt",
+                        "key:id": "tmp_key_inst_custom_comppPoVznFhIG2jlAX713_IOh",
                         "is": "block-code"
                     }
                 });
@@ -373,7 +373,7 @@ define(["exports", "incremental-dom", "ferrugemjs/component-factory", "twbs-hgo/
                     "target": "",
                     "hostVars": {},
                     "staticVars": {
-                        "key:id": "tmp_key_inst_custom_comptZi6Rve6EBkoCF7aG7ad02",
+                        "key:id": "tmp_key_inst_custom_compHRDKX3Z05S5Vjd8Bia60Cj",
                         "is": "test-select-box"
                     }
                 });
@@ -392,7 +392,7 @@ define(["exports", "incremental-dom", "ferrugemjs/component-factory", "twbs-hgo/
                     "staticVars": {
                         "src": "src/test/apps/test-select-box.pug",
                         "language": "pug",
-                        "key:id": "tmp_key_inst_custom_compWvk_zMFiJib6zIxZwVXuKj",
+                        "key:id": "tmp_key_inst_custom_compdhaofccSoXKW4g8G1pA95m",
                         "is": "block-code"
                     }
                 });
@@ -411,7 +411,7 @@ define(["exports", "incremental-dom", "ferrugemjs/component-factory", "twbs-hgo/
                     "staticVars": {
                         "src": "src/test/apps/test-select-box.ts",
                         "language": "typescript",
-                        "key:id": "tmp_key_inst_custom_comptcrZnlNAsfEisZuSjJrTiX",
+                        "key:id": "tmp_key_inst_custom_compJWVKKk9bEIsUo8sX5XdUuf",
                         "is": "block-code"
                     }
                 });
@@ -424,6 +424,6 @@ define(["exports", "incremental-dom", "ferrugemjs/component-factory", "twbs-hgo/
 
             _idom.elementClose("div");
         };
-        return _clazz_sub_HtR0v_btS0NKl7ArDhCPUi_tmp;
+        return _clazz_sub_GEL8JLJvpbmvlAtMKBRLbs_tmp;
     })(function() {})
 });

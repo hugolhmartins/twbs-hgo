@@ -8,7 +8,7 @@
     <style>
       body { padding-top: 70px; }
     </style>
-    <script src="node_modules/requirejs/require.js"></script>
+    <script src="vendors/requirejs/require.js"></script>
   </head>
   <body>    
     <div app="test/init-app" template-extension=".pug"></div>
@@ -18,11 +18,11 @@
           baseUrl: '.',
           map: {
             '*': {
-              'css-loader': "node_modules/require-css/css.min"
+              'css-loader': "vendors/require-css/css.min"
             }
           }
         });
-        require(["node_modules/es6-shim/es6-shim","node_modules/whatwg-fetch/fetch"],function(){
+        require(["vendors/es6-shim/es6-shim","vendors/whatwg-fetch/fetch"],function(){
           fetch('require-config.json')
             .then(function(res){
               return res.json();
