@@ -37,6 +37,7 @@ jspm_packages
 .node_repl_history
 
 #dist dir
+public/
 dist/test
 src/
 tasks/

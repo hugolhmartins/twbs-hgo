@@ -1,9 +1,9 @@
 template(no-model)
-	require(from="css-loader!highlightjs/styles/docco.css")
-	require(from="highlightjs/lib/highlight as _hljs" type="script")
-	require(from="dist/ui/block-code/languages/lang-pug as _lang_pug" type="script")
-	require(from="dist/ui/block-code/languages/lang-xml as _lang_xml" type="script")
-	require(from="dist/ui/block-code/languages/lang-typescript as _lang_typescript" type="script")
+	require(from="css-loader!highlight.js/styles/docco.css")
+	require(from="highlight.js/lib/highlight as _hljs" type="script")
+	require(from="twbs-hgo/block-code/languages/lang-pug as _lang_pug" type="script")
+	require(from="twbs-hgo/block-code/languages/lang-xml as _lang_xml" type="script")
+	require(from="twbs-hgo/block-code/languages/lang-typescript as _lang_typescript" type="script")
 	.block-code
 		script.
 			this._temp_uid = Math.ceil(Math.random()*1000,4);
