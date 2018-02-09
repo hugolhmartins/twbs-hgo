@@ -5,17 +5,17 @@ template
     .ui_pagin_box
     script(if="this.count").
       window.setTimeout(function(){
-      jq('.ui_pagin_box').twbsPagination('destroy');
-      jq('.ui_pagin_box').twbsPagination({
-      totalPages: Math.ceil((this.count)/this.rowsPerPage),
-      currentPage:this.page,
-      visiblePages:this.visiblePages,
-      first:'&laquo;',
-      prev:'&lsaquo;',
-      next:'&rsaquo;',
-      last:'&raquo;',
-      onPageClick: function (event, page) {
-      this.changePage(page-1);
-      }.bind(this)
-      });
+        jq('.ui_pagin_box').twbsPagination('destroy');
+        jq('.ui_pagin_box').twbsPagination({
+          totalPages: Math.ceil((this.count)/this.rowsPerPage),
+          currentPage:this.page,
+          visiblePages:this.visiblePages,
+          first:'&laquo;',
+          prev:'&lsaquo;',
+          next:'&rsaquo;',
+          last:'&raquo;',
+          onPageClick: function (event, page) {
+            this.changePage(page);
+          }.bind(this)
+        });
       }.bind(this), 200)

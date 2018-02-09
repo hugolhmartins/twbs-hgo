@@ -1,6 +1,6 @@
 {
   "name": "twbs-hgo",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A basic router implementation with jspmPackage",
   "main": "dist/ui/index.js",
   "scripts": {
