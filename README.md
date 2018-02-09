@@ -12,4 +12,4 @@ npm install twbs-hgo --save
 
 #### Usage
 
-See [online documentation](https://hugolhmartins.github.io/twbs-hgo/)
+See [online documentation](http://www.hm9.com.br/twbs-hgo/)
