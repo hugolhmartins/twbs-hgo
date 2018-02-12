@@ -40,5 +40,7 @@ template
                 button.btn.btn-warning.btn-sm(data-dismiss='modal' aria-label='Close')
                   | Sim 
                   i.glyphicon.glyphicon-ok
+    .hgo-modal-backdrop
     script(type='text/javascript').
       _jq('.confirm-dialog:first').modal({show:true,backdrop:true});
+      _jq('.modal-backdrop').appendTo('.hgo-modal-backdrop:first');
