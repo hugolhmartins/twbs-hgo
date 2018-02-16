@@ -3,7 +3,7 @@ template
   require(from="twbs-pagination as _twbs_page" type="script")
   div
     .ui_pagin_box
-    script(if="this.count").
+    script(if="this.count > 0 && Number(this.count) > Number(this.rowsPerPage)").
       window.setTimeout(function(){
         jq('.ui_pagin_box').twbsPagination('destroy');
         jq('.ui_pagin_box').twbsPagination({
