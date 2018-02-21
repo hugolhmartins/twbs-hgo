@@ -1,0 +1,39 @@
+template
+  require(from="jquery as jq" type="script")
+  require(from="moment as _moment" type="script")
+  require(from="css-loader!bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css")
+  require(from="bootstrap-datepicker/dist/js/bootstrap-datepicker.min as _twbs_date_picker" type="script")
+  require(from="css-loader!./date-time-picker.css")
+  div(class="${'input-group hgo-date-time-picker ' + (this.isVisible ? 'is-showing' : '')}")
+    input.form-control(id="${this._uid}" type="text" placeholder="${this.placeholder}" change.bind="this.value" value="${this.value ? this.value : ''}")
+    .backdrop(click.trigger="this.refresh({isVisible:false})")
+    .box-date-picker-input
+      .container
+        .date-box(skip="this.loaded")
+        .inputs-box.form.form-inline
+          .input-group.input-group-sm
+            input.form-control(value="${this.hour}" change.bind="this.hour" placeholder="hour" type="number" step="1" min="0" max="23" style="width:60px;margin-right:5px")
+          .input-group.input-group-sm
+            input.form-control(value="${this.minute}" change.bind="this.minute" placeholder="minute" type="number" step="1" min="0" max="59" style="width:80px")
+          .btn.btn-sm.btn-primary.pull-right(click.trigger="this.selectDate") ok
+    span.input-group-addon(click.trigger="this.showCalendar")
+      i.glyphicon.glyphicon-calendar
+    script(if="!this.loaded && this.isVisible" type="text/javascript").
+      this.loaded = true;
+      window.setTimeout(function(){
+        jq("#"+this._uid)
+        .parent(".hgo-date-time-picker")
+        .find(".date-box:first")
+        .datepicker(this.config)
+        .on("changeDate",this.changeDate.bind(this))
+      }.bind(this),100);
+    script(if="this.loaded && this.isVisible" type="text/javascript").
+      window.setTimeout(function(){
+        jq("#"+this._uid)
+          .parent(".hgo-date-time-picker")
+          .find(".date-box:first")
+          .datepicker("setDates", new Date(this.selectedDate.getFullYear(), this.selectedDate.getMonth(), this.selectedDate.getDate())); 
+      }.bind(this),160);
+
+        
+       
