@@ -1,6 +1,6 @@
 {
   "name": "twbs-hgo",
-  "version": "0.0.9",
+  "version": "0.8.0",
   "description": "A basic router implementation with jspmPackage",
   "main": "dist/ui/index.js",
   "scripts": {
@@ -9,8 +9,8 @@
     "compile": "gulp compile",
     "convert": "gulp template",
     "build": "gulp compile && gulp template && gulp sass",
-    "prepublish":"npm run build && gulp css:loader-replace",
-    "build:public":"npm run build && gulp build:public"
+    "prepublish": "npm run build && gulp css:loader-replace",
+    "build:public": "npm run build && gulp build:public"
   },
   "author": "hugolhmartins",
   "license": "ISC",

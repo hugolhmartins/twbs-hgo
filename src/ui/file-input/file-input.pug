@@ -1,0 +1,16 @@
+template
+    style(type='text/css').
+        .file-input-hidden {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            bottom: 0px;
+            opacity: 0;
+            z-index: 10;
+            width: 100%;
+        }  
+    .input-group.input-group-sm
+        input.form-control(value="" disabled="" placeholder="${(this.placehold ? this.placehold:'Select a file to import!')}" type="text")
+        input.file-input-hidden(change.trigger="this.getFile" type='file')
+        span.input-group-btn
+            button.btn.btn-success(type='button') browser a file
