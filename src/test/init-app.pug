@@ -7,6 +7,7 @@ template(no-model)
 	require(from="./apps/test-date-picker")
 	require(from="./apps/test-select-box")
 	require(from="./apps/test-file-input")
+	require(from="./apps/test-date-time-picker")
 	require(from="./struture/nav-bar as top-nav-bar")
 	.container.init-app
 		//-top-nav-bar
@@ -60,3 +61,10 @@ template(no-model)
 				test-file-input
 				block-code(src="src/test/apps/test-file-input.pug" language="pug")
 				block-code(src="src/test/apps/test-file-input.ts" language="typescript")
+			h3 Date Time Picker
+				h4 A Date Time Picker
+			.bs-example
+				h4 Example
+				p This component use moment as format pattern.
+				test-date-time-picker
+				block-code(src="src/test/apps/test-date-time-picker.pug" language="pug")
