@@ -11,6 +11,7 @@ export class SelectBox {
     private selectedIndex: number;
     private arrowIndex: number;
     private isSearching: boolean;
+    private placeholder:string;
     constructor() {
         this._data = [];
         this.valueField = "id";
@@ -18,6 +19,7 @@ export class SelectBox {
         this.value = "";
         this.selectedIndex = -1;
         this.arrowIndex = -1;
+        this.placeholder = "";
     }
     private connectedCallback() {
         //this.setDescFromValue();
@@ -28,12 +30,12 @@ export class SelectBox {
         //this.value = selectedValue;
         this.onSelect.emit(selectedValue);
     }
-    private getSelectedDesc(): string {
+    private getSelectedDesc(){
         let dtaLength = this.data.length;
         if ((!this.isSearching) && dtaLength && this.selectedIndex > -1 && this.selectedIndex < dtaLength) {
-            return <string>new String(this.data[this.selectedIndex][this.descField]);
+            return new String(this.data[this.selectedIndex][this.descField]);
         }
-        return this.descField;
+        return new String();
     }
     private setIndexFromValue() {
         let indxkeeped = 0;
