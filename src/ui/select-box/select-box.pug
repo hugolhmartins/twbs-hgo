@@ -1,8 +1,15 @@
 template
   require(from="jquery as jq" type="script")
   require(from="css-loader!./select-box.css")
-  .input-group.col-xs-24.select-box.not-transformed
-    input.form-control(type="text" placeholder="${this.placeholder}" keyup.trigger="this.setDescFilter" focus.trigger="this.refresh({isVisibleList:true})" blur.trigger="this.refresh({isVisibleList:false})" value="${this.getSelectedDesc()}" index="-1")
+  .input-group.col-xs-24.hgo-select-box.not-transformed
+    script(type="text/javascript").      
+      this.defaultSize = '';
+      if(this.size === 'small'){
+        this.defaultSize = 'input-sm';
+      }else if(this.size === 'large'){
+        this.defaultSize = 'input-lg';
+      }
+    input(class="${'form-control '+this.defaultSize}" type="text" placeholder="${this.placeholder?this.placeholder:''}" keyup.trigger="this.setDescFilter" focus.trigger="this.refresh({isVisibleList:true})" blur.trigger="this.refresh({isVisibleList:false})" value="${this.getSelectedDesc()}" index="-1")
     span.input-group-addon(click.trigger="this.refresh({isVisibleList:!this.isVisibleList})" style="border-left:0px")
       i(class="${'glyphicon glyphicon-menu-'+(this.isVisibleList?'up':'down')}")
     ul.dropdown-list-select-box(if="this.isVisibleList" mousedown.trigger="this.clickListHandler")

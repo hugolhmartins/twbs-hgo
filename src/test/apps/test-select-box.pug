@@ -1,4 +1,8 @@
 template
 	require(from="twbs-hgo/index as hgo" type="namespace")
 	.test-select-box
-		hgo:select-box(data="${this.data}" valueField="id" descField="desc")
+		hgo:select-box(data="${this.data}" valueField="id" descField="desc" placeholder="Selecione...")
+		br
+		hgo:select-box(data="${this.data}" size="large" valueField="id" descField="desc" placeholder="Selecione large")
+		br
+		hgo:select-box(data="${this.data}" size="small" valueField="id" descField="desc" placeholder="Selecione small")

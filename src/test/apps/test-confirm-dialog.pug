@@ -3,8 +3,8 @@ template(no-model)
 	.test-confirm-dialog
 		twbs:confirm-dialog(title="Alert Message" type="warning" if="this.showType === 'warning'") Alert
 		twbs:confirm-dialog(title="Info Message" type="info" if="this.showType === 'info'") Info
-		twbs:confirm-dialog(modal-size="large" footer-buttons-size="large" title="Error Message" type="error" if="this.showType === 'error'") Error
-		twbs:confirm-dialog(modal-size="small" footer-buttons-size="small" title="Confirm Message" type="confirm" if="this.showType === 'confirm'") Confirm
+		twbs:confirm-dialog(size="large" footer-buttons-size="large" title="Error Message" type="error" if="this.showType === 'error'") Error
+		twbs:confirm-dialog(size="small" footer-buttons-size="small" title="Confirm Message" type="confirm" if="this.showType === 'confirm'") Confirm
 		button.btn.btn-warning(click.trigger="this.refresh({showType:'warning'})") warning
 		button.btn.btn-info(click.trigger="this.refresh({showType:'info'})") info
 		button.btn.btn-danger(click.trigger="this.refresh({showType:'error'})") error
