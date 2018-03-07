@@ -1,11 +1,11 @@
 template
-  require(from='jquery as _jq' type='script')
+  require(from="jquery as _jq" type="script")
   require(from="css-loader!./confirm-dialog.css")
   div
-    script(type='text/javascript').
+    script(type="text/javascript").
       this.typeIcon = 'warning sign';
       this.type = this.type||'warning';
-      this.colorType = "warning";
+      this.colorType = 'warning';
       if(this.type === 'info'){
       	this.typeIcon = 'info circle';
         this.colorType = "primary";
@@ -14,10 +14,23 @@ template
         this.colorType = "danger";
       }else if(this.type === 'confirm'){
       	this.typeIcon = 'Help Circle';
-        this.colorType = "success";
+        this.colorType = 'success';
       }
+      this.defaultModalSize = '';
+      if(this.modalSize === 'small'){
+        this.defaultModalSize = 'modal-sm';
+      }else if(this.modalSize === 'large'){
+        this.defaultModalSize = 'modal-lg';
+      }
+      this.defaultFooterButtonsSize = ''
+      if(this.footerButtonsSize === 'small'){
+        this.defaultFooterButtonsSize = 'btn-sm';
+      }else if(this.footerButtonsSize === 'large'){
+        this.defaultFooterButtonsSize = 'btn-lg';
+      }
+
     .modal.fade.confirm-dialog(tabindex='-1' role='dialog')
-      .modal-dialog(style='vertical-align: middle;' role='document')
+      div(class="${'modal-dialog '+ this.defaultModalSize }" style="vertical-align: middle;" role="document")
         .modal-content
           div(class="${'modal-header bg-'+this.colorType}")
             button.close(type='button' data-dismiss='modal' aria-label='Close')
@@ -27,17 +40,17 @@ template
             p
               content
           .modal-footer
-            button.btn.btn-default.btn-sm(if="['warning','confirm'].indexOf(this.type) > -1" type='button' data-dismiss='modal') Cancelar
+            button(class="${'btn btn-default '+this.defaultFooterButtonsSize}" if="['warning','confirm'].indexOf(this.type) > -1" type='button' data-dismiss='modal') Cancelar
             #{"if"}(condition='this.onConfirm.hasSubscribers()')
-              button.btn.btn-warning.btn-sm(click.trigger='this.confirm' data-dismiss='modal' aria-label='Close')
+              button(class="${'btn btn-warning '+this.defaultFooterButtonsSize}" click.trigger='this.confirm' data-dismiss='modal' aria-label='Close')
                 | Sim 
                 i.glyphicon.glyphicon-ok
               #{"elseif"}(condition='this.processUrl')
-                a.btn.btn-warning.btn-sm(href='${this.processUrl}')
+                a(class="${'btn btn-warning '+this.defaultFooterButtonsSize}" href='${this.processUrl}')
                   | Sim 
                   i.glyphicon.glyphicon-ok
               #{"else"}
-                button.btn.btn-warning.btn-sm(data-dismiss='modal' aria-label='Close')
+                button(class="${'btn btn-warning '+this.defaultFooterButtonsSize}" data-dismiss='modal' aria-label='Close')
                   | Sim 
                   i.glyphicon.glyphicon-ok
     .hgo-modal-backdrop
