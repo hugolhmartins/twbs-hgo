@@ -1,7 +1,7 @@
 {
   "name": "twbs-hgo",
   "version": "0.8.1",
-  "description": "A basic router implementation with jspmPackage",
+  "description": "Extended components to twbs with Ferrugemjs.",
   "main": "dist/ui/index.js",
   "scripts": {
     "gulp": "./node_modules/.bin/gulp",
