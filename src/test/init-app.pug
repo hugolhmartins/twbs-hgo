@@ -1,4 +1,4 @@
-template(no-model)
+template
 	require(from="css-loader!./init-app.css")
 	require(from="twbs-hgo/block-code/block-code")
 	require(from="./apps/test-loading-bar")
@@ -10,9 +10,10 @@ template(no-model)
 	require(from="./apps/test-date-time-picker")
 	require(from="./struture/nav-bar as top-nav-bar")
 	.container.init-app
-		top-nav-bar
+		top-nav-bar(project-name="${this.project.name}" project-version="${this.project.version}")
 		.col-xs-12.no-padding-horizontal
 			h2 Instalation
+			h3 ${this.project.description}
 			.bs-example
 				h4 npm
 				pre

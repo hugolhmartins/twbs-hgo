@@ -10,7 +10,7 @@ Object.keys(reqConfig.paths).forEach(path => {
 	pathsJoin.push(`node_modules/${path}/**/*.+(${permitedFormats})`);
 });
 
-gulp.task("build:public",["copy:index","copy:dist","copy:test","copy:src"],function(){
+gulp.task("build:public",["copy:package-json","copy:index","copy:dist","copy:test","copy:src"],function(){
     return gulp.src(pathsJoin, { "base" : "./node_modules" })
         .pipe(gulp.dest("public/vendors"));
 });
@@ -32,5 +32,10 @@ gulp.task("copy:test",function(){
 
 gulp.task("copy:src",function(){
     return gulp.src(["src/test/apps/**/*"], { "base" : "." })
+        .pipe(gulp.dest("public"));
+});
+
+gulp.task("copy:package-json",function(){
+    return gulp.src(["package.json"], { "base" : "." })
         .pipe(gulp.dest("public"));
 });
