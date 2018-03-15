@@ -9,7 +9,7 @@ export class FileInput{
         this.placehold = (<any>pevt.target.files[0]).name;        
         this.refresh();
     }    
-	private disconnectedCallback(){
+	private detached(){
         this.onSelect.unsubscribeAll();
 	}
 }

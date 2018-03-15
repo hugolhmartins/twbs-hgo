@@ -10,7 +10,7 @@ export class LoadingBar{
 			isLoading:on
 		});
 	}
-	private disconnectedCallback(){
+	private detached(){
 		this.refresh({
 			isLoading:false
 		}); 

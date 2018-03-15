@@ -5,7 +5,7 @@ export class ConfirmDialog{
 	private confirm(){
 		this.onConfirm.emit(true);
 	}
-	private disconnectedCallback(){
+	private detached(){
 		this.onConfirm.unsubscribeAll();
 	}
 }

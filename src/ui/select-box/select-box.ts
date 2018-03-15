@@ -21,7 +21,7 @@ export class SelectBox {
         this.arrowIndex = -1;
         this.placeholder = "";
     }
-    private connectedCallback() {
+    private attached() {
         //this.setDescFromValue();
     }
     private setSelectedOption(evt: Event) {
@@ -47,7 +47,7 @@ export class SelectBox {
             this.selectedIndex = indxkeeped;
         }
     }
-    private disconnectedCallback() {
+    private detached() {
         this.onSelect.unsubscribeAll();
     }
     private get data() {

@@ -43,7 +43,7 @@ export class DatePicker {
     private decode(value: string): Date {
         return value && moment(value, this.format).toDate();
     }
-    private disconnectedCallback() {
+    private detached() {
         this.onChange.unsubscribeAll();
     }
     private selectDate(){

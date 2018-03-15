@@ -20,7 +20,7 @@ export class DatePicker {
             this.onChange.emit(this.epochValue);
         }
     }
-    private disconnectedCallback() {
+    private detached() {
         this.onChange.unsubscribeAll();
     }
 }

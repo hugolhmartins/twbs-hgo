@@ -7,7 +7,7 @@ interface IProject{
 export class InitApp{
 	private project:IProject = {name:"", version:"", description:""}
 	private refresh:Function;
-	private connectedCallback(){
+	private attached(){
 		fetch("package.json")
 		.then(res => res.json())
 		.then(({name, version, description}) => {

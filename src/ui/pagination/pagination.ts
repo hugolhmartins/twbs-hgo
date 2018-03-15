@@ -19,7 +19,7 @@ export class Pagination {
             this.onSelectPage.emit(this.page);
         }
     }
-    private disconnectedCallback() {
+    private detached() {
         this.onSelectPage.unsubscribeAll();
     }
 }
