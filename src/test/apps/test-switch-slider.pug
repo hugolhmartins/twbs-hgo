@@ -1,0 +1,5 @@
+template
+	require(from="twbs-hgo/index as twbs" type="namespace")
+	.test-switch-slider
+		twbs:switch-slider(un-checked-value="Hugo" checked-value="Guabi" on-check.subscribe="this.checkHandler")
+		p ${this.test}

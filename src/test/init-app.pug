@@ -8,6 +8,7 @@ template
 	require(from="./apps/test-select-box")
 	require(from="./apps/test-file-input")
 	require(from="./apps/test-date-time-picker")
+	require(from="./apps/test-switch-slider")
 	require(from="./struture/nav-bar as top-nav-bar")
 	.container.init-app
 		top-nav-bar(project-name="${this.project.name}" project-version="${this.project.version}")
@@ -69,3 +70,9 @@ template
 				p This component use moment as format pattern.
 				test-date-time-picker
 				block-code(src="src/test/apps/test-date-time-picker.pug" language="pug")
+			h3 Switch Slider
+				h4 A Switch Slider
+			.bs-example
+				h4 Example
+				test-switch-slider
+				block-code(src="src/test/apps/test-switch-slider.pug" language="pug")
