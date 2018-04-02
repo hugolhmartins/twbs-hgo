@@ -35,7 +35,7 @@ export class SelectBox {
         if ((!this.isSearching) && dtaLength && this.selectedIndex > -1 && this.selectedIndex < dtaLength) {
             return new String(this.data[this.selectedIndex][this.descField]);
         }
-        return new String();
+        return new String(this.descFilter || "");
     }
     private setIndexFromValue() {
         let indxkeeped = 0;
