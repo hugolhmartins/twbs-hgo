@@ -3,4 +3,7 @@ template
   .hgo-switch-slider
     label.switch
       input(disabled.if="this.disabled" type="checkbox" checked.if="this.checked" click.bind="this.value")
-      span(class="${'slider '+(this.type === 'round' ?'round':'')}")
+      span(
+      	class="${'slider '+(this.type === 'round' ?'round':'')}"
+      	style="${ 'background-color:' + ( this.selected ? this.checkedColor : this.unCheckedColor ) }"
+      )
