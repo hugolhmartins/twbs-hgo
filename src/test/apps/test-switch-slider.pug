@@ -1,6 +1,7 @@
 template
 	require(from="twbs-hgo/index as twbs" type="namespace")
 	.test-switch-slider
-		twbs:switch-slider(un-checked-value="Y" checked-value="N" on-check.subscribe="this.checkHandler")
+		twbs:switch-slider(unchecked-value="N" checked-value="Y" on-check.subscribe="this.checkHandler" on-uncheck.subscribe="this.uncheckHandler")
 		span ${this.test}
-		twbs:switch-slider(checked-color="#713192" un-checked-color="#bbbbbb")
+		twbs:switch-slider(checked-color="#713192" unchecked-color="#bbbbbb")
+		twbs:switch-slider(type="round")
