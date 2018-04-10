@@ -2,8 +2,8 @@ template
   require(from="css-loader!./switch-slider.css")
   .hgo-switch-slider
     label.switch
-      input(disabled.if="this.disabled" type="checkbox" checked.if="this.checked" click.bind="this.value")
+      input(disabled.if="this.isDisabled" type="checkbox" checked.if="this.isChecked" click.trigger="this.clickHandler")
       span(
       	class="${'slider '+(this.type === 'round' ?'round':'')}"
-      	style="${ 'background-color:' + ( this.selected ? this.checkedColor : this.uncheckedColor ) }"
+      	style="${ 'background-color:' + ( this.isChecked ? this.checkedColor : this.uncheckedColor ) }"
       )
