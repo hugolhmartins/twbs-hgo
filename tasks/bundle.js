@@ -4,6 +4,7 @@ var reqConfig = require("../require-config.json");
 var permitedFormats = "js|css|woff|woff2|ttf|svg";
 
 var pathsJoin = [];
+pathsJoin.push(`node_modules/ferrugemjs/**/*.+(${permitedFormats})`);
 pathsJoin.push(`node_modules/requirejs/**/*.+(${permitedFormats})`);
 pathsJoin.push(`node_modules/require-css/**/*.+(${permitedFormats})`);
 Object.keys(reqConfig.paths).forEach(path => {
