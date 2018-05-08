@@ -1,42 +1,56 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Twbs-hgo</title>
-    <style>
-      body { padding-top: 70px; }
-    </style>
-    <script src="vendors/requirejs/require.js"></script>
-  </head>
-  <body>    
-    <div app="test/init-app" template-extension=".pug"></div>
-    <script>
-      (function($global){
-        requirejs.config({
-          baseUrl: '.',
-          map: {
-            '*': {
-              'css-loader': "vendors/require-css/css.min"
-            }
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Twbs-hgo</title>
+  <style>
+    body {
+      padding-top: 70px;
+    }
+  </style>
+  <script src="vendors/requirejs/require.js"></script>
+</head>
+
+<body>
+  <div app="test/init-app" template-extension=".pug"></div>
+  <script>
+    (function ($global) {
+      requirejs.config({
+        baseUrl: '.',
+        map: {
+          '*': {
+            'css-loader': "vendors/require-css/css.min"
           }
-        });
-        require(["vendors/es6-shim/es6-shim","vendors/whatwg-fetch/fetch"],function(){
-          fetch('require-config.json')
-            .then(function(res){
-              return res.json();
-            })
-            .then(function(config){
-              requirejs.config({paths:config.paths});
-                require(["jquery"],function(_jq){
-                  $global.jQuery = $global.$ = _jq;
-                  require(["css-loader!bootstrap/css/bootstrap.min.css","bootstrap/js/bootstrap.min","ferrugemjs/bootstrapper"],function(){
-                  });
-                });
-            })
-        });
-      })(window);      
-    </script>
-  </body>
+        }
+      });
+      require(["vendors/es6-shim/es6-shim", "vendors/whatwg-fetch/fetch"], function () {
+        fetch('require-config.json')
+          .then(function (res) {
+            return res.json();
+          })
+          .then(function ({ paths }) {
+            requirejs.config({
+              paths, "packages": [
+                {
+                  "name": "ferrugemjs",
+                  "location": "vendors/ferrugemjs",
+                  "main": "dist/core/index"
+                }
+              ],
+            });
+            require(["jquery"], function (_jq) {
+              $global.jQuery = $global.$ = _jq;
+              require(["ferrugemjs", "css-loader!bootstrap/css/bootstrap.min.css", "bootstrap/js/bootstrap.min"], function (_fjs) {
+                _fjs.bootstrapper();
+              });
+            });
+          })
+      });
+    })(window);      
+  </script>
+</body>
+
 </html>

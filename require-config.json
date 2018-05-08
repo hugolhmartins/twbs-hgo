@@ -1,17 +1,16 @@
 {
-      "paths":{
-            "jquery":"vendors/jquery/dist/jquery.min"
-            ,"bootstrap":"vendors/bootstrap/dist"
-            ,"event-emitter-lite":"vendors/event-emitter-lite/dist/amd/EventEmitter"
-            ,"incremental-dom":"vendors/incremental-dom/dist/incremental-dom-min"
-            ,"ferrugemjs":"vendors/ferrugemjs/dist/core"
-            ,"twbs-hgo":"vendors/twbs-hgo/dist/ui"
-            ,"tslib":"vendors/tslib/tslib"
-            ,"es6-shim":"vendors/es6-shim/es6-shim"
-            ,"whatwg-fetch":"vendors/whatwg-fetch/fetch"
-            ,"moment":"vendors/moment/moment"
-            ,"highlight.js":"vendors/highlight.js"
-            ,"twbs-pagination":"vendors/twbs-pagination/jquery.twbsPagination.min"
-            ,"bootstrap-datepicker":"vendors/bootstrap-datepicker"
+      "paths": {
+            "jquery": "vendors/jquery/dist/jquery.min",
+            "bootstrap": "vendors/bootstrap/dist",
+            "event-emitter-lite": "vendors/event-emitter-lite/dist/amd/EventEmitter",
+            "incremental-dom": "vendors/incremental-dom/dist/incremental-dom-min",
+            "twbs-hgo": "vendors/twbs-hgo/dist/ui",
+            "tslib": "vendors/tslib/tslib",
+            "es6-shim": "vendors/es6-shim/es6-shim",
+            "whatwg-fetch": "vendors/whatwg-fetch/fetch",
+            "moment": "vendors/moment",
+            "highlight.js": "vendors/highlight.js",
+            "twbs-pagination": "vendors/twbs-pagination/jquery.twbsPagination.min",
+            "bootstrap-datepicker": "vendors/bootstrap-datepicker"
       }
 }
