@@ -31,7 +31,8 @@
               requirejs.config({paths:config.paths});
                 require(["jquery"],function(_jq){
                   $global.jQuery = $global.$ = _jq;
-                  require(["css-loader!bootstrap/css/bootstrap.min.css","bootstrap/js/bootstrap.min","ferrugemjs/bootstrapper"],function(){
+                  require(["ferrugemjs","css-loader!bootstrap/css/bootstrap.min.css","bootstrap/js/bootstrap.min"],function(_fjs){
+                    _fjs.bootstrapper();
                   });
                 });
             })

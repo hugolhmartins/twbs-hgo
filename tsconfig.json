@@ -16,8 +16,9 @@
         ,"lib": ["dom", "es6"]
         ,"paths": {
             "tslib" : ["node_modules/tslib/tslib.d.ts"]
-            ,"event-emitter-lite":["node_modules/event-emitter-lite/dist/amd/event-emitter.d.ts"]
+            ,"event-emitter-lite":["node_modules/event-emitter-lite/dist/@types/event-emitter-lite/index.d.ts"]
             ,"moment":["node_modules/moment/moment.d.ts"]
+            ,"ferrugemjs" : ["node_modules/ferrugemjs/dist/core/index.d.ts"]            
         }
     },
     "exclude": [

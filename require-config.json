@@ -4,7 +4,7 @@
             ,"bootstrap":"vendors/bootstrap/dist"
             ,"event-emitter-lite":"vendors/event-emitter-lite/dist/amd/EventEmitter"
             ,"incremental-dom":"vendors/incremental-dom/dist/incremental-dom-min"
-            ,"ferrugemjs":"vendors/ferrugemjs/dist/core"
+            ,"ferrugemjs":"vendors/ferrugemjs/dist/core/index"
             ,"twbs-hgo":"vendors/twbs-hgo/dist/ui"
             ,"tslib":"vendors/tslib/tslib"
             ,"es6-shim":"vendors/es6-shim/es6-shim"

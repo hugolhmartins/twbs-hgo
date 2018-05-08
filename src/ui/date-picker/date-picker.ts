@@ -1,4 +1,4 @@
-import * as moment from "moment";
+import * as moment from "moment/min/moment.min";
 import { EventEmitter } from "event-emitter-lite";
 
 export class DatePicker {
