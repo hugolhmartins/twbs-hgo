@@ -1,4 +1,4 @@
 template
 	require(from="twbs-hgo/index as twbs" type="namespace")
 	.test-file-input
-		twbs:file-input(on-select.subscribe="this.selectFileHandler")
+		twbs:file-input(on-select.subscribe="this.selectFileHandler" accept=".gif, .jpg, .png, .doc, .pdf")

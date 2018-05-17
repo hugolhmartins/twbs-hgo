@@ -11,6 +11,6 @@ template
         }  
     .input-group.input-group-sm
         input.form-control(value="" disabled="" placeholder="${(this.placehold ? this.placehold:'Select a file to import!')}" type="text")
-        input.file-input-hidden(change.trigger="this.getFile" type='file')
+        input.file-input-hidden(change.trigger="this.getFile" type='file' accept="${this.accept}")
         span.input-group-btn
             button.btn.btn-success(type='button') browser a file
