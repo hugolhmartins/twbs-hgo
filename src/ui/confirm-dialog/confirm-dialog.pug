@@ -1,4 +1,4 @@
-template
+template(no-model)
   require(from="jquery as _jq" type="script")
   require(from="css-loader!./confirm-dialog.css")
   div
@@ -22,12 +22,6 @@ template
       }else if(this.size === 'large'){
         this.defaultModalSize = 'modal-lg';
       }
-      this.defaultFooterButtonsSize = ''
-      if(this.footerButtonsSize === 'small'){
-        this.defaultFooterButtonsSize = 'btn-sm';
-      }else if(this.footerButtonsSize === 'large'){
-        this.defaultFooterButtonsSize = 'btn-lg';
-      }
 
     .modal.fade.confirm-dialog(tabindex='-1' role='dialog')
       div(class="${'modal-dialog '+ this.defaultModalSize }" style="vertical-align: middle;" role="document")
@@ -36,23 +30,7 @@ template
             button.close(type='button' data-dismiss='modal' aria-label='Close')
               span(aria-hidden='true') &times;
             h4.modal-title ${(this.title ? this.title : ' ')}
-          .modal-body
-            p
-              content
-          .modal-footer
-            button(class="${'btn btn-default '+this.defaultFooterButtonsSize}" if="['warning','confirm'].indexOf(this.type) > -1" type='button' data-dismiss='modal') Cancelar
-            #{"if"}(condition='this.onConfirm.hasSubscribers()')
-              button(class="${'btn btn-warning '+this.defaultFooterButtonsSize}" click.trigger='this.confirm' data-dismiss='modal' aria-label='Close')
-                | Sim 
-                i.glyphicon.glyphicon-ok
-              #{"elseif"}(condition='this.processUrl')
-                a(class="${'btn btn-warning '+this.defaultFooterButtonsSize}" href='${this.processUrl}')
-                  | Sim 
-                  i.glyphicon.glyphicon-ok
-              #{"else"}
-                button(class="${'btn btn-warning '+this.defaultFooterButtonsSize}" data-dismiss='modal' aria-label='Close')
-                  | Sim 
-                  i.glyphicon.glyphicon-ok
+          content
     .hgo-modal-backdrop
     script(type='text/javascript').
       _jq('.confirm-dialog:first').modal({show:true,backdrop:true});

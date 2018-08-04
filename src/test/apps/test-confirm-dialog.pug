@@ -1,10 +1,30 @@
 template(no-model)
 	require(from="twbs-hgo/index as twbs" type="namespace")
 	.test-confirm-dialog
-		twbs:confirm-dialog(title="Alert Message" type="warning" if="this.showType === 'warning'") Alert
-		twbs:confirm-dialog(title="Info Message" type="info" if="this.showType === 'info'") Info
-		twbs:confirm-dialog(size="large" footer-buttons-size="large" title="Error Message" type="error" if="this.showType === 'error'") Error
-		twbs:confirm-dialog(size="small" footer-buttons-size="small" title="Confirm Message" type="confirm" if="this.showType === 'confirm'") Confirm
+		twbs:confirm-dialog(title="Alert Message" type="warning" if="this.showType === 'warning'")
+			.modal-body
+				p Alert text
+			.modal-footer
+				button.btn.btn-default(type='button' data-dismiss='modal') Cancelar
+				button.btn.btn-success(type='button' data-dismiss='modal') Confirmar
+		twbs:confirm-dialog(title="Info Message" type="info" if="this.showType === 'info'")
+			.modal-body
+				p Info text
+			.modal-footer
+				button.btn.btn-default(type='button' data-dismiss='modal') Cancelar
+				button.btn.btn-success(type='button' data-dismiss='modal') Confirmar
+		twbs:confirm-dialog(size="large" title="Error Message" type="error" if="this.showType === 'error'")
+			.modal-body
+				p Error text
+			.modal-footer
+				button.btn.btn-default(type='button' data-dismiss='modal') Cancelar
+				button.btn.btn-success(type='button' data-dismiss='modal') Confirmar
+		twbs:confirm-dialog(size="small" title="Confirm Message" type="confirm" if="this.showType === 'confirm'")
+			.modal-body
+				p Confirm text
+			.modal-footer
+				button.btn.btn-default(type='button' data-dismiss='modal') Cancelar
+				button.btn.btn-success(type='button' data-dismiss='modal') Confirmar		
 		button.btn.btn-warning(click.trigger="this.refresh({showType:'warning'})") warning
 		button.btn.btn-info(click.trigger="this.refresh({showType:'info'})") info
 		button.btn.btn-danger(click.trigger="this.refresh({showType:'error'})") error
