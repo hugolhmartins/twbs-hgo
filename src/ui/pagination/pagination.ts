@@ -20,6 +20,5 @@ export class Pagination {
         }
     }
     private detached() {
-        this.onSelectPage.unsubscribeAll();
     }
 }

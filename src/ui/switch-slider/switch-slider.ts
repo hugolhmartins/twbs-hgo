@@ -33,7 +33,5 @@ export class SwitchSlider{
         this.refresh();
     }
 	private detached(){
-        this.onCheck.unsubscribeAll();
-        this.onUncheck.unsubscribeAll();
 	}
 }

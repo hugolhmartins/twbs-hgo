@@ -15,6 +15,5 @@ export class FileInput{
         this.refresh();
     }    
 	private detached(){
-        this.onSelect.unsubscribeAll();
 	}
 }

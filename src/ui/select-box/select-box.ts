@@ -48,7 +48,6 @@ export class SelectBox {
         }
     }
     private detached() {
-        this.onSelect.unsubscribeAll();
     }
     private get data() {
         if (this.descFilter) {

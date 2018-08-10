@@ -21,6 +21,5 @@ export class DatePicker {
         }
     }
     private detached() {
-        this.onChange.unsubscribeAll();
     }
 }

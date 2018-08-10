@@ -44,7 +44,6 @@ export class DatePicker {
         return value && moment(value, this.format).toDate();
     }
     private detached() {
-        this.onChange.unsubscribeAll();
     }
     private selectDate(){
         let hours = Number(this.hour) || 0;
