@@ -1,6 +1,6 @@
 {
   "name": "twbs-hgo",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Extended components to twbs ^3.3.7 with Ferrugemjs ^1.7.0",
   "main": "dist/ui/index.js",
   "scripts": {
